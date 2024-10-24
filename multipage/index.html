@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Software Company</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <section class="hero">
+        <h1>Welcome to Software Company</h1>
+        <p>Your partner in digital transformation.</p>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Load shared navbar and footer dynamically
+        fetch('../shared/navbar.html').then(res => res.text()).then(html => document.getElementById('navbar').innerHTML = html);
+        fetch('../shared/footer.html').then(res => res.text()).then(html => document.getElementById('footer').innerHTML = html);
+    </script>
+</body>
+</html>
+
